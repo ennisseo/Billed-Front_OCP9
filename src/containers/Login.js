@@ -40,8 +40,8 @@ export default class Login {
   handleSubmitAdmin = e => {
     e.preventDefault()
     const user = {
-      type: "Admin",
-      email: e.target.querySelector(`input[data-testid="admin-email-input"]`).value,
+      type: "Admin", 
+      email: e.target.querySelector(`input[data-testid="admin-email-input"]`).value, // changing the CSS selector so that it targets the right input field 
       password: e.target.querySelector(`input[data-testid="admin-password-input"]`).value,
       status: "connected"
     }
