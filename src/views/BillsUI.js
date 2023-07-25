@@ -20,6 +20,7 @@ const row = (bill) => {
 }
 
 const rows = (data) => {
+  // AddING the sorting function to update the existing bills
   return (data && data.length) ? data.sort(function (a, b) {
     var dateA = new Date(a.date);
     var dateB = new Date(b.date);
@@ -31,7 +32,7 @@ const rows = (data) => {
 export default ({ data: bills, loading, error }) => {
 
   const modal = () => (`
-    <div class="modal fade" id="modaleFile" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="modaleFile" data-testid='modaleFile' tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">

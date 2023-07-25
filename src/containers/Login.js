@@ -41,7 +41,8 @@ export default class Login {
     e.preventDefault()
     const user = {
       type: "Admin", 
-      email: e.target.querySelector(`input[data-testid="admin-email-input"]`).value, // changing the CSS selector so that it targets the right input field 
+      // Changing the CSS selector to target the right input field 
+      email: e.target.querySelector(`input[data-testid="admin-email-input"]`).value,
       password: e.target.querySelector(`input[data-testid="admin-password-input"]`).value,
       status: "connected"
     }

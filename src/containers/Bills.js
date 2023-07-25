@@ -17,7 +17,7 @@ export default class {
   }
 
   handleClickNewBill = () => {
-    this.onNavigate(ROUTES_PATH.NewBill)
+    this.onNavigate(ROUTES_PATH['NewBill'])
   }
 
   handleClickIconEye = (icon) => {
@@ -34,6 +34,7 @@ export default class {
         .list()
         .then(snapshot => {
           const bills = snapshot
+          // Add a sorting function
             .sort(function (a, b) {
               var dateA = new Date(a.date);
               var dateB = new Date(b.date);
